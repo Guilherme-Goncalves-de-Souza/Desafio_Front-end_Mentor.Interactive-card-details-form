@@ -1,0 +1,302 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 18px;
+  width: 100vw;
+  height: 100vh;
+}
+
+p {
+  color: white;
+}
+
+p, label {
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+p.error {
+  color: hsl(0deg, 100%, 66%);
+  text-transform: initial;
+  font-size: 12px;
+  margin-top: -3px;
+  display: none;
+}
+
+.carddate p.error {
+  margin-top: 8px;
+  display: none;
+}
+
+button {
+  padding: 20px;
+  background-color: hsl(278deg, 68%, 11%);
+  color: white;
+  margin-top: 25px;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+input {
+  padding: 15px;
+  border: 1px solid hsl(270deg, 3%, 87%);
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+input:focus {
+  outline-color: hsl(249deg, 73%, 47%);
+}
+
+input::placeholder {
+  color: hsl(270deg, 3%, 87%);
+}
+
+.container {
+  padding: 40px 10px 40px 10px;
+}
+
+main .card {
+  background-image: url("../images/bg-main-mobile.png");
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 240px;
+}
+main .card .cardBack img,
+main .card .cardFront img.cf {
+  width: 285px;
+  height: 160px;
+  z-index: 1;
+  position: relative;
+}
+main .card .cardBack img {
+  right: -65px;
+}
+main .card .cardBack p {
+  position: relative;
+  z-index: 99;
+  top: -95px;
+  right: -289px;
+  font-size: 12px;
+}
+main .card .cardFront img {
+  top: -91px;
+  left: 5px;
+}
+main .card .cardFront .content {
+  padding: 20px;
+  width: 273px;
+  position: relative;
+  top: -262px;
+  left: 2px;
+  z-index: 100;
+}
+main .card .cardFront .content img {
+  width: auto;
+  height: 35px;
+  margin-bottom: 30px;
+}
+main .card .cardFront .content .name-date {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 10px;
+}
+main .form {
+  margin-top: 70px;
+  font-size: 14.5px;
+}
+main .form .container {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+main .form form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+main .form form .cardname,
+main .form form .cardnumber,
+main .form form .carddate,
+main .form form .cardcvc {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+}
+main .form form input {
+  width: 100%;
+}
+main .form form .carddate {
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+main .form form .carddate .date {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 10px;
+}
+main .form form .carddate .date input {
+  width: 43%;
+}
+main .form form .carddate .date input:nth-child(1) {
+  margin-right: 5px;
+}
+main .form form .carddate .cvc {
+  width: 150px;
+  flex: 1;
+}
+main .form form .carddate .cvc input {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.card-details {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  padding: 0px 15px;
+}
+.card-details h1 {
+  margin-top: 40px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+.card-details p {
+  color: hsl(279deg, 6%, 55%);
+  margin-top: 30px;
+  margin-bottom: 45px;
+  text-transform: initial;
+}
+.card-details button {
+  width: 100%;
+  margin-top: 0px;
+}
+
+@media (min-width: 500px) {
+  main .card .container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  main .form .container {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  main .form .carddate .cvc {
+    width: 368px !important;
+  }
+  .card-details button {
+    width: 70%;
+  }
+}
+@media (min-width: 1200px) {
+  main {
+    display: flex;
+    flex-direction: row;
+  }
+  main .card {
+    width: 480px;
+    height: 100vh;
+    background-image: url("../images/bg-main-desktop.png");
+    background-position: center;
+    background-size: cover;
+  }
+  main .card .container {
+    height: 100vh;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 0;
+    gap: 30px;
+  }
+  main .card .cardBack img,
+  main .card .cardFront img.cf {
+    width: 445px;
+    height: 245px;
+    z-index: 1;
+  }
+  main .card .cardBack img {
+    right: -290px;
+  }
+  main .card .cardBack p {
+    top: -137px;
+    left: 645px;
+    font-size: 13px;
+  }
+  main .card .cardFront {
+    left: 0;
+    height: 245px;
+  }
+  main .card .cardFront .content {
+    top: -245px;
+    left: 210px;
+  }
+  main .card .cardFront .content img {
+    width: auto;
+    height: auto;
+    margin-bottom: 50px;
+  }
+  main .card .cardFront .content .name-date {
+    margin-top: 35px;
+    font-size: 14px;
+    width: 380px;
+  }
+  main .card .cardFront .content p.numberCard {
+    width: 380px;
+    font-size: 30px;
+  }
+  main .card .cardFront img {
+    top: 0;
+    left: 200px;
+  }
+  main .form {
+    margin-left: 315px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 0;
+  }
+  main .form form {
+    width: 400px;
+  }
+  main .form .carddate .date input {
+    width: 80px !important;
+  }
+  main .card-details {
+    margin-left: 340px;
+  }
+  main .card-details button {
+    width: 100%;
+  }
+}
+@media (min-width: 1380px) {
+  main {
+    display: flex;
+    flex-direction: row;
+  }
+  main .form {
+    margin-left: 350px;
+  }
+  main .card-details {
+    margin-left: 440px;
+  }
+  main .card-details button {
+    width: 130%;
+  }
+}
