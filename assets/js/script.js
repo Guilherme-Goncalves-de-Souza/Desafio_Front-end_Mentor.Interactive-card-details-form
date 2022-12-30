@@ -9,7 +9,7 @@ let inputName = document.querySelector("#cardName")
 let inputNumber = document.querySelector("#cardNumber")
 let inputMonth = document.querySelector(".cardMonth")
 let inputYear = document.querySelector(".cardYear")
-let inputCvc = document.querySelector("#cardCvc")
+let inputCvc = document.querySelector("#cardcvc")
 let button = document.querySelector("button")
 
 let pErrorName = document.querySelector(".Name")
