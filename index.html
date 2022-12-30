@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Guilherme Gonçalves de Souza">
+    <meta name="description" content="Desafio Interactive card details form do Front-end Mentor">
+    <meta name="keywords" content="HTML,CSS,JavaScript, DOM, Front-end Mentor, form">
+
+    <link rel="shortcut icon" href="./assets/images/favicon-32x32.png">
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+
+    <title>Interactive card details form</title>
+</head>
+
+<body>
+    <main>
+        <div class="card">
+            <div class="container">
+                <div class="cardBack">
+                    <img src="./assets/images/bg-card-back.png" alt="Card Back">
+
+                    <p class="pCardBack">000</p>
+                </div>
+                
+                <div class="cardFront">
+                    <img class="cf" src="./assets/images/bg-card-front.png" alt="Card Front">
+
+                    <div class="content">
+                        <img src="./assets/images/card-logo.svg" alt="Card logo">
+                        <p class="numberCard">0000 0000 0000 0000</p>
+                        <div class="name-date">
+                            <p class="nomeCard">Jane Appleseed</p>
+                            <p class="dataCard">00/00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="form">
+            <div class="container">
+                <form>
+                    <div class="cardname">
+                        <label for="cardName">Cardholder name</label>
+                        <input type="text" id="cardName" placeholder="e.g. Jane Applessed">
+                        <p class="error Name">Enter your name</p>
+                    </div>
+
+                    <div class="cardnumber">
+                        <label for="cardNumber">Card number</label>
+                        <input type="text" id="cardNumber" placeholder="e.g. 1234 5678 9123 0000" maxlength="19">
+                        <p class="error Number-1">Wrong format, numbers only</p>
+                        <p class="error Number-2">Enter the card number</p>
+                    </div>
+
+                    <div class="carddate">
+                        <div class="date">
+                            <label for="cardDate">Exp. date (mm/yy)</label>
+                            <div class="inputs">
+                                <input type="number" id="cardDate" class="cardMonth" placeholder="MM" min="1" max="12">
+                                <input type="number" id="cardDate" class="cardYear" placeholder="YY" min="23" max="70">
+                                <p class="error Date">Can't be blank</p>        
+                            </div>
+                        </div>
+                        
+                        <div class="cvc">
+                            <label for="cardcvc">Cvc</label>
+                            <input type="number" id="cardCvc" placeholder="e.g. 123" min="100" max="999">
+                            <p class="error Cvc">Can't be blank</p>      
+                        </div>
+                    </div>
+                    <button type="submit">Confirm</button>
+
+                </form>
+            </div>
+        </div>
+
+        <div class="card-details">
+            <img src="./assets/images/icon-complete.svg" alt="Complete details">
+            <h1>Thank You!</h1>
+            <p>We've added your card details</p>
+            <button>Continue</button>
+        </div>
+    </main>
+
+    <script src="./assets/js/script.js"></script>
+
+</body>
+
+</html>
